@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="岡村研嗣のポートフォリオサイト。EC事業運営の経験を活かし、新たなキャリアに挑戦します。">
+    <meta name="keywords" content="岡村研嗣, ポートフォリオ, EC事業, 転職, 経歴">
+    <meta name="author" content="岡村研嗣">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://okamura-portfolio.com/">
+    <meta property="og:title" content="岡村研嗣 - ポートフォリオサイト">
+    <meta property="og:description" content="EC事業運営の経験を持つ岡村研嗣のポートフォリオサイトです。">
+    <meta property="og:image" content="https://okamura-portfolio.com/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://okamura-portfolio.com/">
+    <meta property="twitter:title" content="岡村研嗣 - ポートフォリオサイト">
+    <meta property="twitter:description" content="EC事業運営の経験を持つ岡村研嗣のポートフォリオサイトです。">
+    <meta property="twitter:image" content="https://okamura-portfolio.com/og-image.jpg">
+    
+    <title>岡村研嗣 - ポートフォリオサイト</title>
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="images/okamuralogo_optimized.jpg">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "岡村研嗣",
+        "jobTitle": "熊本県出身 1999年生まれ",
+        "description": "EC事業運営の経験を持つプロフェッショナル",
+        "url": "https://okamura-portfolio.com",
+        "sameAs": [
+            "https://linkedin.com/in/okamura-kenji",
+            "https://github.com/okamura-kenji"
+        ]
+    }
+    </script>
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header class="header" role="banner">
+        <nav class="navbar" role="navigation" aria-label="メインナビゲーション">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img src="images/okamuralogo_optimized.jpg" alt="岡村研嗣" class="logo-image">
+                </div>
+                
+                <div class="nav-pills-container">
+                    <ul class="nav-pills" role="menubar">
+                        <li role="none"><a href="#home" class="nav-pill active" role="menuitem">ホーム</a></li>
+                        <li role="none"><a href="#about" class="nav-pill" role="menuitem">自己紹介</a></li>
+                        <li role="none"><a href="#resume" class="nav-pill" role="menuitem">経歴</a></li>
+                        <li role="none"><a href="#analysis" class="nav-pill" role="menuitem">自己分析</a></li>
+                        <li role="none"><a href="#portfolio" class="nav-pill" role="menuitem">ポートフォリオ</a></li>
+                        <li role="none"><a href="#hobbies" class="nav-pill" role="menuitem">趣味</a></li>
+                    </ul>
+                </div>
+                
+                <button class="hamburger" aria-label="メニューを開く" aria-expanded="false" aria-controls="nav-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- メインコンテンツ -->
+    <main role="main">
+        <!-- ヒーローセクション -->
+        <section id="home" class="hero" aria-labelledby="hero-title">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <div class="hello-bubble">
+                            <span>Hello!</span>
+                        </div>
+                        <h1 id="hero-title" class="hero-title">岡村研嗣<br>Kenji Okmamura</h1>
+                        <p class="hero-description">
+                            個人事業主としてのEC物販事業から企業でのECストア運営まで、幅広い業務を担当しました。より高い視座で成長できる場所を探しています。
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="#projects" class="cta-button" aria-label="ポートフォリオを見る">
+                                <span>ポートフォリオを見る</span>
+                                <span aria-hidden="true">→</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <div class="hero-avatar" role="img" aria-label="岡村研嗣のアバター">
+                            <img src="images/kenjiTop_optimized.jpg" alt="岡村研嗣" class="hero-avatar-image">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About/Serviceセクション -->
+        <section id="about" class="about-service" aria-labelledby="about-title">
+            <div class="container">
+                <div class="about-service-content">
+                    <!-- About Me Section -->
+                    <div class="about-section">
+                        <div class="section-header">
+                            <h2 id="about-title" class="section-title">自己紹介</h2>
+                            <p class="section-description">
+                                大学中退後からEC事業運営・デジタルマーケティング分野で5年間の経験を積み重ねてきました。
+                                個人事業主としてのEC物販事業から企業でのECストア運営まで、
+                                デジタルコマースの幅広い経験を身につけ、常に結果にコミットしてきました。
+                            </p>
+                        </div>
+                        
+                        <div class="about-stats">
+                            <div class="stat-item">
+                                <div class="stat-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M12 2L13.09 8.26L20 9L13.09 9.74L12 16L10.91 9.74L4 9L10.91 8.26L12 2Z" fill="currentColor"/>
+                                    </svg>
+                                </div>
+                                <div class="stat-content">
+                                    <h3>5年</h3>
+                                    <p>EC事業運営経験</p>
+                                </div>
+                            </div>
+                            
+                            <div class="stat-item">
+                                <div class="stat-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M9 11H7v8h2v-8zm4-4h-2v12h2V7zm4-4h-2v16h2V3z" fill="currentColor"/>
+                                    </svg>
+                                </div>
+                                <div class="stat-content">
+                                    <h3>中国輸入</h3>
+                                    <p>OEM商品開発</p>
+                                </div>
+                            </div>
+                            
+                            <div class="stat-item">
+                                <div class="stat-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2ZM21 9V7L15 7.5V9L21 9ZM3 9V7L9 7.5V9L3 9Z" fill="currentColor"/>
+                                    </svg>
+                                </div>
+                                <div class="stat-content">
+                                    <h3>DX推進</h3>
+                                    <p>業務効率化実績</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 自己分析セクション -->
+        <section id="analysis" class="analysis" aria-labelledby="analysis-title">
+            <div class="container">
+                <!-- セクションヘッダー -->
+                <div class="section-header">
+                    <h2 id="analysis-title" class="section-title">Why Hire me?</h2>
+                    <p class="section-description">
+                        複数の診断ツールと360度フィードバックを活用し、自分の強みと特性を客観的に分析しました。
+                        これらの結果を基に、より効果的な働き方と成長戦略を構築しています。
+                    </p>
+                </div>
+
+                <div class="analysis-content">
+                    <!-- プロフィール画像エリア -->
+                    <div class="analysis-profile">
+                        <div class="profile-image-container">
+                            <div class="profile-image">
+                                <img src="images/profile-analysis.svg" alt="岡村健二のプロフィール画像" />
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- メインコンテンツエリア -->
+                    <div class="analysis-main">
+                        <div class="analysis-intro">
+                            <h3>データに基づく自己分析</h3>
+                            <p>
+                                客観的な診断結果と実績データを組み合わせて、私の強みと価値を明確にしています。
+                            </p>
+                        </div>
+                        
+                        <!-- 統計情報 -->
+                        <div class="analysis-stats">
+                            <div class="stat-item">
+                                <div class="stat-number">95%</div>
+                                <div class="stat-label">芸術的適性スコア</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">INFJ-A</div>
+                                <div class="stat-label">MBTI性格タイプ</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">A+</div>
+                                <div class="stat-label">論理的思考力</div>
+                            </div>
+                        </div>
+                        
+                        <!-- 詳細分析ボタン -->
+                        <div class="analysis-action">
+                            <a href="self-analysis.html" class="analysis-btn" style="display: inline-block; text-decoration: none; text-align: center;">
+                                詳細な分析結果を見る
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 詳細分析セクション（初期は非表示） -->
+                <div class="analysis-details" id="analysisDetails" style="display: none;">
+                    <div class="analysis-grid">
+                        <div class="analysis-card">
+                            <h4><span aria-hidden="true">🧠</span> 認知能力テスト結果</h4>
+                            <div class="analysis-results">
+                                <div class="result-item">
+                                    <span>論理的思考力</span>
+                                    <span class="result-rank">A</span>
+                                </div>
+                                <div class="result-item">
+                                    <span>数値分析力</span>
+                                    <span class="result-rank">A</span>
+                                </div>
+                                <div class="result-item">
+                                    <span>言語理解力</span>
+                                    <span class="result-rank">B+</span>
+                                </div>
+                                <div class="result-item">
+                                    <span>空間認識力</span>
+                                    <span class="result-rank">B</span>
+                                </div>
+                                <div class="result-item">
+                                    <span>処理速度</span>
+                                    <span class="result-rank">A</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="analysis-card">
+                            <h4><span aria-hidden="true">💼</span> RIASEC職業適性診断結果</h4>
+                            <div class="analysis-results">
+                                <div class="result-item">
+                                    <span>芸術的（Artistic）</span>
+                                    <span class="result-rank">95</span>
+                                </div>
+                                <div class="result-item">
+                                    <span>慣習的（Conventional）</span>
+                                    <span class="result-rank">83</span>
+                                </div>
+                                <div class="result-item">
+                                    <span>現実的（Realistic）</span>
+                                    <span class="result-rank">75</span>
+                                </div>
+                                <div class="result-item">
+                                    <span>研究的（Investigative）</span>
+                                    <span class="result-rank">70</span>
+                                </div>
+                                <div class="result-item">
+                                    <span>社会的（Social）</span>
+                                    <span class="result-rank">65</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="analysis-card">
+                            <h4><span aria-hidden="true">🧭</span> MBTI性格診断結果</h4>
+                            <div class="mbti-type">
+                                <div class="mbti-header">
+                                    <span class="mbti-code">INFJ-A</span>
+                                    <span class="mbti-name">提唱者</span>
+                                </div>
+                                <p class="mbti-description">
+                                    理想主義と洞察力を併せ持つ、異彩を放つ存在。複雑な感情、鮮明な想像力、深い共感力により他者と深くつながることができる。
+                                </p>
+                            </div>
+                            <div class="mbti-traits">
+                                <div class="trait-item">
+                                    <span class="trait-label">内向性（I）</span>
+                                    <span class="trait-desc">深い内省と一対一の関係を重視</span>
+                                </div>
+                                <div class="trait-item">
+                                    <span class="trait-label">直感（N）</span>
+                                    <span class="trait-desc">可能性とパターンを見抜く力</span>
+                                </div>
+                                <div class="trait-item">
+                                    <span class="trait-label">感情（F）</span>
+                                    <span class="trait-desc">価値観と人間関係を重視した判断</span>
+                                </div>
+                                <div class="trait-item">
+                                    <span class="trait-label">判断（J）</span>
+                                    <span class="trait-desc">計画性と組織的なアプローチ</span>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="personality-section">
+                    <h3><span aria-hidden="true">🎭</span> VIAキャラクター強みプロファイル</h3>
+                    <div class="personality-types">
+                        <div class="personality-type">
+                            <h5>誠実さ（1位）</h5>
+                            <p>正直で信頼できる人間関係を築き、約束や責任を重視する。真摯な態度で物事に取り組み、他者からの信頼を得ることができる。</p>
+                        </div>
+                        <div class="personality-type">
+                            <h5>ユーモア（2位）</h5>
+                            <p>明るく楽しい雰囲気を作り出し、チームの士気向上に貢献する。困難な状況でも前向きな視点を保ち、周囲を元気づけることができる。</p>
+                        </div>
+                        <div class="personality-type">
+                            <h5>親切心（3位）</h5>
+                            <p>他者への思いやりと配慮を持ち、困っている人を積極的にサポートする。チームワークを重視し、協力的な関係構築が得意。</p>
+                        </div>
+                        <div class="personality-type">
+                            <h5>公平さ・チームワーク・創造性（4-6位）</h5>
+                            <p>公正な判断力、協調性、そして新しいアイデアを生み出す創造力を併せ持つ。バランスの取れた視点で問題解決に取り組む。</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="values-section">
+                    <h3><span aria-hidden="true">💎</span> 価値観・動機分析</h3>
+                    <div class="values-list">
+                        <div class="value-item">
+                            <span><strong>成長・学習:</strong> 常に新しいスキルや知識を習得し、自己改善を続けることを重視</span>
+                            <span class="result-rank">1位</span>
+                        </div>
+                        <div class="value-item">
+                            <span><strong>チームワーク:</strong> 個人の成果よりもチーム全体の成功を優先する</span>
+                            <span class="result-rank">2位</span>
+                        </div>
+                        <div class="value-item">
+                            <span><strong>顧客志向:</strong> 顧客の成功と満足を最優先に考えた行動を取る</span>
+                            <span class="result-rank">3位</span>
+                        </div>
+                        <div class="value-item">
+                            <span><strong>結果重視:</strong> 明確な目標設定と結果にコミットする姿勢</span>
+                            <span class="result-rank">4位</span>
+                        </div>
+                        <div class="value-item">
+                            <span><strong>革新性:</strong> 新しいアイデアや手法を積極的に取り入れる</span>
+                            <span class="result-rank">5位</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="personal-section">
+                    <div class="personal-card">
+                        <h4><span aria-hidden="true">💪</span> 強み</h4>
+                        <div class="personal-detail">
+                            <strong>誠実さ:</strong> 責任感を持って約束を守り、信頼できる人間関係を構築
+                        </div>
+                        <div class="personal-detail">
+                            <strong>ユーモア:</strong> 明るい雰囲気作りでチームの士気向上に貢献
+                        </div>
+                        <div class="personal-detail">
+                            <strong>親切心:</strong> 他者への配慮と協力的な姿勢でチームワークを重視
+                        </div>
+                        <div class="personal-detail">
+                            <strong>創造性:</strong> 新しいアイデアと革新的な解決策の提案が得意
+                        </div>
+                    </div>
+                    
+                    <div class="personal-card">
+                        <h4><span aria-hidden="true">🎯</span> 改善点</h4>
+                        <div class="personal-detail">
+                            <strong>技術スキル:</strong> 最新のマーケティングテクノロジーの習得を継続
+                        </div>
+                        <div class="personal-detail">
+                            <strong>国際感覚:</strong> グローバル市場での経験とスキルの向上
+                        </div>
+                        <div class="personal-detail">
+                            <strong>専門性:</strong> 特定領域での更なる専門知識の深化
+                        </div>
+                        <div class="personal-detail">
+                            <strong>時間管理:</strong> より効率的なタスク管理と優先順位付け
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resume セクション -->
+        <section id="resume" class="resume" aria-labelledby="resume-title">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="resume-title" class="section-title">経歴</h2>
+                    <p class="section-description">
+                        EC事業運営とDX推進の分野で培った経験とスキルをご紹介します。
+                    </p>
+                </div>
+                
+                <div class="resume-content">
+                    <!-- Work Experience Section - Figma Design -->
+                    <div class="work-experience-section">
+                        <div class="work-experience-header">
+                            <h2 class="work-experience-title">My Work Experience</h2>
+                        </div>
+                        
+                        <div class="work-experience-container">
+                            <!-- Left Column: Company & Period -->
+                            <div class="company-column">
+                                <div class="company-item">
+                                    <h3 class="company-name">高校・大学生時代</h3>
+                                    <p class="company-period">2015年4月 - 2021年3月</p>
+                                </div>
+                                
+                                <div class="company-item">
+                                    <h3 class="company-name">個人事業主</h3>
+                                    <p class="company-period">2021年4月 - 2023年12月</p>
+                                </div>
+                                
+                                <div class="company-item">
+                                    <h3 class="company-name">株式会社フェニックス</h3>
+                                    <p class="company-period">2023年12月 - 現在</p>
+                                </div>
+
+                            </div>
+                            
+                            <!-- Center Column: Timeline -->
+                            <div class="timeline-column">
+                                <div class="timeline-line"></div>
+                                <div class="timeline-markers">
+                                    <div class="timeline-marker">
+                                        <div class="marker-circle"></div>
+                                    </div>
+                                    <div class="timeline-marker">
+                                        <div class="marker-circle"></div>
+                                    </div>
+                                    <div class="timeline-marker active">
+                                        <div class="marker-circle"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Right Column: Position & Description -->
+                            <div class="position-column">
+                                <div class="position-item">
+                                    <h3 class="position-title">学業・基礎スキル習得</h3>
+                                    <p class="position-description">バンド結成し、高校バンドコンテストにトリとして出場。アルバイトで貯金をするのが趣味。大学では経営学科を選ぶも就職することが考えられず早期に中退。
+                                </div>
+                                
+                                <div class="position-item">
+                                    <h3 class="position-title">EC物販事業・動画編集業務</h3>
+                                    <p class="position-description">Amazon・楽天・Yahoo!ショッピングでの物販事業を運営。商品リサーチから販売・顧客対応まで一人で完結させるEC事業を展開し、安定した収益を確保。</p>
+                                </div>
+                                
+                                <div class="position-item">
+                                    <h3 class="position-title">EC運営・商品開発・DX推進</h3>
+                                    <p class="position-description">年商6億円のEC事業会社でスポーツ用品・ペット用品・ギター用品の企画から販売まで一気通貫で担当。Notion・Make・AIツールを活用した業務自動化により月間20時間の工数削減を実現。</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Skills Section -->
+                    <div class="skills-section">
+                        <h3 class="subsection-title">Skills</h3>
+                        
+                        <div class="skills-grid">
+                            <div class="skill-category">
+                                <h4>EC・マーケティング</h4>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">Amazon</span>
+                                    <span class="skill-tag">楽天市場</span>
+                                    <span class="skill-tag">商品企画</span>
+                                    <span class="skill-tag">SEO対策</span>
+                                    <span class="skill-tag">市場調査</span>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-category">
+                                <h4>DX・ツール活用</h4>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">Notion</span>
+                                    <span class="skill-tag">Make</span>
+                                    <span class="skill-tag">ChatGPT</span>
+                                    <span class="skill-tag">ChatGPT Claude </span>
+                                    <span class="skill-tag">Dify </span>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-category">
+                                <h4>制作・編集</h4>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">動画編集</span>
+                                    <span class="skill-tag">LP制作</span>
+                                    <span class="skill-tag">コンテンツ企画</span>
+                                    <span class="skill-tag">データ分析</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Certifications Section -->
+                    <div class="certifications-section">
+                        <h3 class="subsection-title">Certifications</h3>
+                        
+                        <div class="certifications-list">
+                            <div class="certification-item">
+                                <div class="cert-date">2024.11</div>
+                                <div class="cert-name">Google AI Essentials</div>
+                            </div>
+                            <div class="certification-item">
+                                <div class="cert-date">2018.06</div>
+                                <div class="cert-name">Microsoft Office Specialist (Word, Excel, PowerPoint)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 自己分析セクション -->
+        <section id="analysis" class="analysis" aria-labelledby="analysis-title">
+            <div class="container">
+                <!-- セクションヘッダー -->
+                <div class="section-header">
+                    <h2 id="analysis-title" class="section-title">Why Hire me?</h2>
+                    <p class="section-description">
+                        複数の診断ツールと360度フィードバックを活用し、自分の強みと特性を客観的に分析しました。
+                        これらの結果を基に、より効果的な働き方と成長戦略を構築しています。
+                    </p>
+                </div>
+
+                <div class="analysis-content">
+                    <!-- プロフィール画像エリア -->
+                    <div class="analysis-profile">
+                        <div class="profile-image-container">
+                            <div class="profile-image">
+                                <img src="images/profile-analysis.svg" alt="岡村健二のプロフィール画像" />
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- メインコンテンツエリア -->
+                    <div class="analysis-main">
+                        <div class="analysis-intro">
+                            <h3>データに基づく自己分析</h3>
+                            <p>
+                                客観的な診断結果と実績データを組み合わせて、私の強みと価値を明確にしています。
+                            </p>
+                        </div>
+                        
+                        <!-- 統計情報 -->
+                        <div class="analysis-stats">
+                            <div class="stat-item">
+                                <div class="stat-number">95%</div>
+                                <div class="stat-label">芸術的適性スコア</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">INFJ-A</div>
+                                <div class="stat-label">MBTI性格タイプ</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">A+</div>
+                                <div class="stat-label">論理的思考力</div>
+                            </div>
+                        </div>
+                        
+                        <!-- 詳細分析ボタン -->
+                        <div class="analysis-action">
+                            <a href="self-analysis.html" class="analysis-btn" style="display: inline-block; text-decoration: none; text-align: center;">
+                                詳細な分析結果を見る
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 詳細分析セクション（初期は非表示） -->
+                <div class="analysis-details" id="analysisDetails" style="display: none;">
+                    <div class="analysis-grid">
+                        <div class="analysis-card">
+                            <h4><span aria-hidden="true">🧠</span> 認知能力テスト結果</h4>
+                            <div class="analysis-results">
+                                <div class="result-item">
+                                    <span>論理的思考力</span>
+                                    <span class="result-rank">A</span>
+                                </div>
+                                <div class="result-item">
+                                    <span>数値分析力</span>
+                                    <span class="result-rank">A</span>
+                                </div>
+                                <div class="result-item">
+                                    <span>言語理解力</span>
+                                    <span class="result-rank">B+</span>
+                                </div>
+                                <div class="result-item">
+                                    <span>空間認識力</span>
+                                    <span class="result-rank">B</span>
+                                </div>
+                                <div class="result-item">
+                                    <span>処理速度</span>
+                                    <span class="result-rank">A</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="analysis-card">
+                            <h4><span aria-hidden="true">💼</span> RIASEC職業適性診断結果</h4>
+                            <div class="analysis-results">
+                                <div class="result-item">
+                                    <span>芸術的（Artistic）</span>
+                                    <span class="result-rank">95</span>
+                                </div>
+                                <div class="result-item">
+                                    <span>慣習的（Conventional）</span>
+                                    <span class="result-rank">83</span>
+                                </div>
+                                <div class="result-item">
+                                    <span>現実的（Realistic）</span>
+                                    <span class="result-rank">75</span>
+                                </div>
+                                <div class="result-item">
+                                    <span>研究的（Investigative）</span>
+                                    <span class="result-rank">70</span>
+                                </div>
+                                <div class="result-item">
+                                    <span>社会的（Social）</span>
+                                    <span class="result-rank">65</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="analysis-card">
+                            <h4><span aria-hidden="true">🧭</span> MBTI性格診断結果</h4>
+                            <div class="mbti-type">
+                                <div class="mbti-header">
+                                    <span class="mbti-code">INFJ-A</span>
+                                    <span class="mbti-name">提唱者</span>
+                                </div>
+                                <p class="mbti-description">
+                                    理想主義と洞察力を併せ持つ、異彩を放つ存在。複雑な感情、鮮明な想像力、深い共感力により他者と深くつながることができる。
+                                </p>
+                            </div>
+                            <div class="mbti-traits">
+                                <div class="trait-item">
+                                    <span class="trait-label">内向性（I）</span>
+                                    <span class="trait-desc">深い内省と一対一の関係を重視</span>
+                                </div>
+                                <div class="trait-item">
+                                    <span class="trait-label">直感（N）</span>
+                                    <span class="trait-desc">可能性とパターンを見抜く力</span>
+                                </div>
+                                <div class="trait-item">
+                                    <span class="trait-label">感情（F）</span>
+                                    <span class="trait-desc">価値観と人間関係を重視した判断</span>
+                                </div>
+                                <div class="trait-item">
+                                    <span class="trait-label">判断（J）</span>
+                                    <span class="trait-desc">計画性と組織的なアプローチ</span>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="personality-section">
+                    <h3><span aria-hidden="true">🎭</span> VIAキャラクター強みプロファイル</h3>
+                    <div class="personality-types">
+                        <div class="personality-type">
+                            <h5>誠実さ（1位）</h5>
+                            <p>正直で信頼できる人間関係を築き、約束や責任を重視する。真摯な態度で物事に取り組み、他者からの信頼を得ることができる。</p>
+                        </div>
+                        <div class="personality-type">
+                            <h5>ユーモア（2位）</h5>
+                            <p>明るく楽しい雰囲気を作り出し、チームの士気向上に貢献する。困難な状況でも前向きな視点を保ち、周囲を元気づけることができる。</p>
+                        </div>
+                        <div class="personality-type">
+                            <h5>親切心（3位）</h5>
+                            <p>他者への思いやりと配慮を持ち、困っている人を積極的にサポートする。チームワークを重視し、協力的な関係構築が得意。</p>
+                        </div>
+                        <div class="personality-type">
+                            <h5>公平さ・チームワーク・創造性（4-6位）</h5>
+                            <p>公正な判断力、協調性、そして新しいアイデアを生み出す創造力を併せ持つ。バランスの取れた視点で問題解決に取り組む。</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="values-section">
+                    <h3><span aria-hidden="true">💎</span> 価値観・動機分析</h3>
+                    <div class="values-list">
+                        <div class="value-item">
+                            <span><strong>成長・学習:</strong> 常に新しいスキルや知識を習得し、自己改善を続けることを重視</span>
+                            <span class="result-rank">1位</span>
+                        </div>
+                        <div class="value-item">
+                            <span><strong>チームワーク:</strong> 個人の成果よりもチーム全体の成功を優先する</span>
+                            <span class="result-rank">2位</span>
+                        </div>
+                        <div class="value-item">
+                            <span><strong>顧客志向:</strong> 顧客の成功と満足を最優先に考えた行動を取る</span>
+                            <span class="result-rank">3位</span>
+                        </div>
+                        <div class="value-item">
+                            <span><strong>結果重視:</strong> 明確な目標設定と結果にコミットする姿勢</span>
+                            <span class="result-rank">4位</span>
+                        </div>
+                        <div class="value-item">
+                            <span><strong>革新性:</strong> 新しいアイデアや手法を積極的に取り入れる</span>
+                            <span class="result-rank">5位</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="personal-section">
+                    <div class="personal-card">
+                        <h4><span aria-hidden="true">💪</span> 強み</h4>
+                        <div class="personal-detail">
+                            <strong>誠実さ:</strong> 責任感を持って約束を守り、信頼できる人間関係を構築
+                        </div>
+                        <div class="personal-detail">
+                            <strong>ユーモア:</strong> 明るい雰囲気作りでチームの士気向上に貢献
+                        </div>
+                        <div class="personal-detail">
+                            <strong>親切心:</strong> 他者への配慮と協力的な姿勢でチームワークを重視
+                        </div>
+                        <div class="personal-detail">
+                            <strong>創造性:</strong> 新しいアイデアと革新的な解決策の提案が得意
+                        </div>
+                    </div>
+                    
+                    <div class="personal-card">
+                        <h4><span aria-hidden="true">🎯</span> 改善点</h4>
+                        <div class="personal-detail">
+                            <strong>技術スキル:</strong> 最新のマーケティングテクノロジーの習得を継続
+                        </div>
+                        <div class="personal-detail">
+                            <strong>国際感覚:</strong> グローバル市場での経験とスキルの向上
+                        </div>
+                        <div class="personal-detail">
+                            <strong>専門性:</strong> 特定領域での更なる専門知識の深化
+                        </div>
+                        <div class="personal-detail">
+                            <strong>時間管理:</strong> より効率的なタスク管理と優先順位付け
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- 趣味セクション -->
+        <section id="hobbies" class="hobbies">
+            <div class="container">
+                <h2 class="section-title">趣味</h2>
+                <div class="hobbies-content">
+                    <div class="hobby-category">
+                        <h3>スポーツ・エンターテイメント</h3>
+                        <div class="hobby-items">
+                            <div class="hobby-item">
+                                <h4>野球観戦（ホークス）</h4>
+                                <p>福岡ソフトバンクホークスの熱烈なファンとして、試合観戦を楽しんでいます。チームの戦略や選手の成長を見るのが好きです。</p>
+                            </div>
+                            <div class="hobby-item">
+                                <h4>ゲーム</h4>
+                                <p>プロスピ、レースゲーム、オフラインストーリーゲーム、シミュレーションゲームなど、様々なジャンルを楽しんでいます。</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="hobby-category">
+                        <h3>テクノロジー・創作</h3>
+                        <div class="hobby-items">
+                            <div class="hobby-item">
+                                <h4>自作PC・ガジェット</h4>
+                                <p>最新のテクノロジーやガジェットに興味があり、自作PCの組み立てや新しいデバイスの研究を楽しんでいます。</p>
+                            </div>
+                            <div class="hobby-item">
+                                <h4>ペアコーディング・AI開発</h4>
+                                <p>Cursorなどを使ったペアコーディングでの簡単なアプリ開発や、MCPを活用したAIエージェント作成に取り組んでいます。</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="hobby-category">
+                        <h3>音楽・アート</h3>
+                        <div class="hobby-items">
+                            <div class="hobby-item">
+                                <h4>楽器演奏</h4>
+                                <p>ギターとドラムを演奏します。最近はさぼり気味。。。
+                            </div>
+                            <div class="hobby-item">
+                                <h4>ライブ観戦</h4>
+                                <p>好きなアーティストは必ず観に行きます。
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="hobby-category">
+                        <h3>ライフスタイル</h3>
+                        <div class="hobby-items">
+                            <div class="hobby-item">
+                                <h4>車・バイク・旅行</h4>
+                                <p>幼少期から車が好きで、サーキットに行ったりラジコンを作ることが好きでした。車・バイクは割と詳しいです。海外旅行に行ってみたい。
+                            </div>
+                            <div class="hobby-item">
+                                <h4>物件探し・ネットサーフィン</h4>
+                                <p>不動産情報の収集や、インターネットでの情報収集、オンラインショッピングを楽しんでいます。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 好きなアーティストセクション -->
+        <section id="artists" class="artists">
+            <div class="container">
+                <h2 class="section-title">好きなアーティスト</h2>
+                <div class="artists-grid">
+                    <div class="artist-category">
+                        <h3>洋楽</h3>
+                        <div class="artist-tags">
+                            <span class="artist-tag">ビートルズ</span>
+                            <span class="artist-tag">ローリングストーンズ</span>
+                            <span class="artist-tag">デヴィッド・ボウイ</span>
+                            <span class="artist-tag">oasis>
+                            <span class="artist-tag">エリッククラプトン</span>
+                        </div>
+                    </div>
+                    
+                    <div class="artist-category">
+                        <h3>邦楽</h3>
+                        <div class="artist-tags">
+                            <span class="artist-tag">THE YELLOW MONKEY</span>
+                            <span class="artist-tag">エレファントカシマシ</span>
+                            <span class="artist-tag">ELLEGARDEN</span>
+                            <span class="artist-tag">The Birthday</span>
+                            <span class="artist-tag">THEE MICHELLE GUN ELEPHANT 
+                            <span class="artist-tag">BLANKEY JET CITY
+                            <span class="artist-tag">斉藤和義</span>
+                            <span class="artist-tag">奥田民生</span>
+                            <span class="artist-tag">サカナクション</span>
+                            <span class="artist-tag">フジファブリック</span>
+                            <span class="artist-tag">OKAMOTO'S
+                        </div>
+                    </div>
+                </div>
+                
+
+                
+                <div class="spotify-playlist">
+                    <h3>私のプレイリスト</h3>
+                    <p>好きなアーティストの楽曲をまとめたプレイリストです。ぜひお聴きください。</p>
+                    <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/34Bc4nn4vTt4EMIkUzBbbV?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- フッター -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 岡村研嗣. All rights reserved.</p>
+                <p>このサイトは個人のポートフォリオサイトです。</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    
+    <!-- パフォーマンス監視 -->
+    <script>
+        // Core Web Vitals の測定
+        if ('web-vital' in window) {
+            import('https://unpkg.com/web-vitals@3/dist/web-vitals.js').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+                getCLS(console.log);
+                getFID(console.log);
+                getFCP(console.log);
+                getLCP(console.log);
+                getTTFB(console.log);
+            });
+        }
+    </script>
+</body>
+</html>

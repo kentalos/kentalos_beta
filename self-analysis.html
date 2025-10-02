@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自己分析詳細 - 岡村研嗣</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* 自己分析詳細ページ専用スタイル */
+        .analysis-detail-page {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 2rem 0;
+        }
+        
+        .analysis-header {
+            text-align: center;
+            color: white;
+            margin-bottom: 3rem;
+        }
+        
+        .analysis-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .analysis-header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .back-button {
+            position: fixed;
+            top: 2rem;
+            left: 2rem;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border: 2px solid rgba(255,255,255,0.3);
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+        }
+        
+        .back-button:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .analysis-sections {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .analysis-section {
+            background: white;
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .analysis-section:hover {
+            transform: translateY(-5px);
+        }
+        
+        .section-title {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .section-icon {
+            font-size: 2.5rem;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .mbti-overview {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 2rem;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+        
+        .mbti-type {
+            text-align: center;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+        }
+        
+        .mbti-type h3 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .mbti-type p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .riasec-scores {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .riasec-item {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            border-left: 4px solid #667eea;
+        }
+        
+        .riasec-score {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+        
+        .strengths-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .strength-card {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid #28a745;
+        }
+        
+        .strength-rank {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #28a745;
+            margin-bottom: 0.5rem;
+        }
+        
+        .strength-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+        
+        .strength-description {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .personality-traits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .trait-card {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid #dc3545;
+        }
+        
+        .trait-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+        
+        .trait-description {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        @media (max-width: 768px) {
+            .analysis-header h1 {
+                font-size: 2rem;
+            }
+            
+            .back-button {
+                top: 1rem;
+                left: 1rem;
+                padding: 0.6rem 1rem;
+            }
+            
+            .analysis-section {
+                padding: 1.5rem;
+            }
+            
+            .mbti-overview {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .mbti-type img {
+                width: 80px;
+                height: 80px;
+            }
+            
+            .infj-illustration img {
+                max-width: 200px !important;
+            }
+            
+            .infj-illustration {
+                margin: 1rem 0 !important;
+                padding: 1rem !important;
+            }
+            
+            .section-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="analysis-detail-page">
+        <a href="index.html#analysis" class="back-button">
+            <i class="fas fa-arrow-left"></i> ポートフォリオに戻る
+        </a>
+        
+        <div class="analysis-header">
+            <h1>自己分析詳細レポート</h1>
+            <p>複数の診断ツールを活用した客観的な自己分析結果をご紹介します</p>
+        </div>
+        
+        <div class="analysis-sections">
+            <!-- MBTI性格診断 -->
+            <div class="analysis-section">
+                <h2 class="section-title">
+                    <i class="fas fa-brain section-icon"></i>
+                    MBTI性格診断結果
+                </h2>
+                
+                <div class="mbti-overview">
+                    <div class="mbti-type">
+                        <img src="images/INFJA.png" alt="INFJ-A 提唱者" style="width: 120px; height: 120px; border-radius: 50%; margin-bottom: 1rem; border: 3px solid rgba(255,255,255,0.3);">
+                        <h3>INFJ-A</h3>
+                        <p>提唱者</p>
+                    </div>
+                    <div>
+                        <p><strong>INFJ（提唱者）</strong>は異彩を放つ存在で、「理想主義」と「洞察力」というユニークな特性の組み合わせを備えています。豊かな内面は、「複雑な感情」「鮮明な想像力」「深い共感力」という特徴があり、他者と深くつながることができます。</p>
+                    </div>
+                </div>
+                
+                <!-- INFJ-A イラスト -->
+                <div class="infj-illustration" style="text-align: center; margin: 2rem 0; padding: 2rem; background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05)); border-radius: 15px; backdrop-filter: blur(10px);">
+                    <img src="images/infj-illustration.svg" alt="INFJ-A 提唱者のイラスト" style="max-width: 300px; width: 100%; height: auto; filter: drop-shadow(0 10px 20px rgba(0,0,0,0.1));">
+                    <p style="margin-top: 1rem; color: rgba(255,255,255,0.8); font-style: italic;">理想主義と洞察力を兼ね備えた提唱者</p>
+                </div>
+                
+                <div class="personality-traits">
+                    <div class="trait-card">
+                        <div class="trait-title">🎯 完璧主義</div>
+                        <div class="trait-description">仕事や私生活において完璧を目指して努力することが多く、自分と他人に高い基準を設定する傾向があります。</div>
+                    </div>
+                    <div class="trait-card">
+                        <div class="trait-title">🚀 野心</div>
+                        <div class="trait-description">人生において自分が選んだ分野で目標を達成し、成功し、周囲に有意義な影響を与えたいという願望が強いです。</div>
+                    </div>
+                    <div class="trait-card">
+                        <div class="trait-title">💪 モチベーション</div>
+                        <div class="trait-description">困難に直面しても行動を起こし、目標を追求し、前進し続けるための内なる衝動を持っています。</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- RIASEC職業適性診断 -->
+            <div class="analysis-section">
+                <h2 class="section-title">
+                    <i class="fas fa-briefcase section-icon"></i>
+                    RIASEC職業適性診断
+                </h2>
+                
+                <p>職業興味と適性を6つのタイプで分析した結果です。最も高いスコアが適性の高い分野を示しています。</p>
+                
+                <div class="riasec-scores">
+                    <div class="riasec-item">
+                        <div class="riasec-score">95</div>
+                        <div><strong>芸術的（A）</strong></div>
+                        <div>創造性・表現力</div>
+                    </div>
+                    <div class="riasec-item">
+                        <div class="riasec-score">83</div>
+                        <div><strong>慣習的（C）</strong></div>
+                        <div>組織的・規則的</div>
+                    </div>
+                    <div class="riasec-item">
+                        <div class="riasec-score">75</div>
+                        <div><strong>現実的（R）</strong></div>
+                        <div>実践的・技術的</div>
+                    </div>
+                    <div class="riasec-item">
+                        <div class="riasec-score">65</div>
+                        <div><strong>社会的（S）</strong></div>
+                        <div>人との関わり</div>
+                    </div>
+                    <div class="riasec-item">
+                        <div class="riasec-score">56</div>
+                        <div><strong>企業的（E）</strong></div>
+                        <div>リーダーシップ</div>
+                    </div>
+                    <div class="riasec-item">
+                        <div class="riasec-score">29</div>
+                        <div><strong>研究的（I）</strong></div>
+                        <div>探究・分析</div>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 2rem; padding: 1.5rem; background: #e3f2fd; border-radius: 10px;">
+                    <h4>🎨 特徴の読み取り</h4>
+                    <ul>
+                        <li><strong>芸術的（A）95：</strong> 芸術・創造性を活かす仕事に強い適性</li>
+                        <li><strong>慣習的（C）83：</strong> 組織的・規則的な仕事にも関心</li>
+                        <li><strong>現実的（R）75：</strong> 具体的なモノを扱う業務への適性</li>
+                        <li><strong>社会的・企業的：</strong> 人との関わりやリーダーシップも活かせる</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- VIAキャラクター強み -->
+            <div class="analysis-section">
+                <h2 class="section-title">
+                    <i class="fas fa-star section-icon"></i>
+                    VIAキャラクター強みプロファイル
+                </h2>
+                
+                <p>24の強みの中から、特に優れている上位10の強みを特定しました。</p>
+                
+                <div class="strengths-grid">
+                    <div class="strength-card">
+                        <div class="strength-rank">1位</div>
+                        <div class="strength-title">誠実さ</div>
+                        <div class="strength-description">真実を語り、偽りなく存在する。自分の気持ちと行動に責任を持つ。</div>
+                    </div>
+                    <div class="strength-card">
+                        <div class="strength-rank">2位</div>
+                        <div class="strength-title">ユーモア</div>
+                        <div class="strength-description">笑いやいたずらを好み、人に笑いをもたらす。明るい面を見ようとする。</div>
+                    </div>
+                    <div class="strength-card">
+                        <div class="strength-rank">3位</div>
+                        <div class="strength-title">親切心</div>
+                        <div class="strength-description">他人に対して親切で寛大。見知らぬ人にも喜んで良い行いができる。</div>
+                    </div>
+                    <div class="strength-card">
+                        <div class="strength-rank">4位</div>
+                        <div class="strength-title">公平さ</div>
+                        <div class="strength-description">個人的感情に左右されず、すべての人を公平に扱いチャンスを与える。</div>
+                    </div>
+                    <div class="strength-card">
+                        <div class="strength-rank">5位</div>
+                        <div class="strength-title">チームワーク</div>
+                        <div class="strength-description">グループの一員として忠実で献身的。成功のために尽力する。</div>
+                    </div>
+                    <div class="strength-card">
+                        <div class="strength-rank">6位</div>
+                        <div class="strength-title">創造性</div>
+                        <div class="strength-description">新しいやり方を考える力。従来の方法では満足せず、改善を探求する。</div>
+                    </div>
+                    <div class="strength-card">
+                        <div class="strength-rank">7位</div>
+                        <div class="strength-title">寛容さ</div>
+                        <div class="strength-description">過ちを犯した人をゆるし、やり直すチャンスを与える。復讐心を持たない。</div>
+                    </div>
+                    <div class="strength-card">
+                        <div class="strength-rank">8位</div>
+                        <div class="strength-title">好奇心</div>
+                        <div class="strength-description">あらゆる経験や主題に興味を持ち、探求と発見を好む。</div>
+                    </div>
+                    <div class="strength-card">
+                        <div class="strength-rank">9位</div>
+                        <div class="strength-title">大局観</div>
+                        <div class="strength-description">賢明な助言ができ、納得感のある世界観を持つ。他者に信頼される。</div>
+                    </div>
+                    <div class="strength-card">
+                        <div class="strength-rank">10位</div>
+                        <div class="strength-title">社会的知性</div>
+                        <div class="strength-description">他者の動機や感情を理解し、適切に振る舞うことができる。</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- キャリア適性 -->
+            <div class="analysis-section">
+                <h2 class="section-title">
+                    <i class="fas fa-chart-line section-icon"></i>
+                    キャリア適性と今後の方向性
+                </h2>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                    <div>
+                        <h4>🎯 適性の高い職業分野</h4>
+                        <ul style="line-height: 2;">
+                            <li>クリエイティブ・デザイン関連</li>
+                            <li>EC事業・デジタルマーケティング</li>
+                            <li>プロダクト企画・開発</li>
+                            <li>DX推進・業務改善</li>
+                            <li>チームリーダー・プロジェクトマネージャー</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>💪 活かせる強み</h4>
+                        <ul style="line-height: 2;">
+                            <li>創造性と実用性のバランス</li>
+                            <li>チームワークとリーダーシップ</li>
+                            <li>誠実で信頼される人柄</li>
+                            <li>新しい技術への好奇心</li>
+                            <li>ユーモアによるコミュニケーション力</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 2rem; padding: 2rem; background: linear-gradient(135deg, #667eea, #764ba2); color: white; border-radius: 15px;">
+                    <h4 style="margin-bottom: 1rem;">🚀 今後のビジョン</h4>
+                    <p style="line-height: 1.8;">
+                        創造性と技術力を活かしながら、チームと共に価値のあるプロダクトを生み出していきたいと考えています。
+                        EC事業での経験とDXスキルを基盤に、より多くの人に喜ばれるサービスの企画・開発に携わり、
+                        組織の成長と個人の成長を両立させていくことが目標です。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
