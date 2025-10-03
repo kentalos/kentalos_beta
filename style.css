@@ -2463,67 +2463,227 @@ section {
  }
  
  /* ダークモード対応 */
- @media (prefers-color-scheme: dark) {
-     body {
-         background: #000;
-         color: #f5f5f7;
-     }
-     
-     .header {
-         background: rgba(0, 0, 0, 0.8);
-     }
-     
-     .header.scrolled {
-         background: rgba(0, 0, 0, 0.95);
-     }
-     
-     .nav-logo h1,
-     .nav-link {
-         color: #f5f5f7;
-     }
-     
-     .hamburger span {
-         background: #f5f5f7;
-     }
-     
-     .hero {
-         background: linear-gradient(135deg, #1d1d1f 0%, #2d2d30 100%);
-     }
-     
-     .about,
-     .analysis,
-     .presentation {
-         background: #1d1d1f;
-     }
-     
-     .career,
-     .portfolio {
-         background: #000;
-     }
-     
-     .section-title {
-         color: #f5f5f7;
-     }
-     
-     .analysis-card,
-     .personality-section,
-     .values-section,
-     .personal-card,
-     .presentation-viewer {
-         background: #2d2d30;
-         color: #f5f5f7;
-     }
-     
-     .career-content,
-     .achievement-card {
-         background: #2d2d30;
-         color: #f5f5f7;
-     }
-     
-     .nav-menu {
-         background: #2d2d30;
-     }
- }
+@media (prefers-color-scheme: dark) {
+    body {
+        background: #000;
+        color: #ffffff;
+    }
+    
+    .header {
+        background: rgba(0, 0, 0, 0.8);
+    }
+    
+    .header.scrolled {
+        background: rgba(0, 0, 0, 0.95);
+    }
+    
+    .nav-logo h1,
+    .nav-link {
+        color: #ffffff;
+    }
+    
+    .hamburger span {
+        background: #ffffff;
+    }
+    
+    .hero {
+        background: linear-gradient(135deg, #1d1d1f 0%, #2d2d30 100%);
+    }
+    
+    .about,
+    .analysis,
+    .presentation {
+        background: #1d1d1f;
+    }
+    
+    .career,
+    .portfolio {
+        background: #000;
+    }
+    
+    .section-title {
+        color: #ffffff;
+    }
+    
+    .analysis-card,
+    .personality-section,
+    .values-section,
+    .personal-card,
+    .presentation-viewer {
+        background: #2d2d30;
+        color: #ffffff;
+    }
+    
+    .career-content,
+    .achievement-card {
+        background: #2d2d30;
+        color: #ffffff;
+    }
+    
+    .nav-menu {
+        background: #2d2d30;
+    }
+    
+    /* 自己分析ページ用のダークモードスタイル */
+    h1, h2, h3, h4, h5, h6 {
+        color: #ffffff;
+    }
+    
+    p {
+        color: #ffffff;
+    }
+    
+    strong {
+        color: #ffffff;
+    }
+    
+    li {
+        color: #ffffff;
+    }
+    
+    /* MBTI関連 */
+    .mbti-card {
+        background: #2d2d30;
+        color: #ffffff;
+        border-color: #444;
+    }
+    
+    .mbti-type {
+        color: #ffffff;
+    }
+    
+    .mbti-description {
+        color: #ffffff;
+    }
+    
+    .mbti-illustration {
+        background: #2d2d30;
+        color: #ffffff;
+    }
+    
+    .mbti-traits {
+        background: #2d2d30;
+    }
+    
+    .trait-item {
+        background: #333;
+        color: #ffffff;
+    }
+    
+    /* RIASEC関連 */
+    .riasec-chart {
+        background: #2d2d30;
+    }
+    
+    .riasec-item {
+        background: #333;
+        color: #ffffff;
+        border-color: #444;
+    }
+    
+    .riasec-score {
+        color: #ffffff;
+    }
+    
+    .riasec-type {
+        color: #ffffff;
+    }
+    
+    .riasec-desc {
+        color: #ffffff;
+    }
+    
+    .riasec-insights {
+        background: #2d2d30;
+    }
+    
+    /* VIA強み関連 */
+    .strengths-grid {
+        background: #2d2d30;
+    }
+    
+    .strength-item {
+        background: #333;
+        color: #ffffff;
+        border-color: #444;
+    }
+    
+    .strength-rank {
+        color: #ffffff;
+    }
+    
+    .strength-name {
+        color: #ffffff;
+    }
+    
+    .strength-desc {
+        color: #ffffff;
+    }
+    
+    /* キャリア方向性関連 */
+    .career-direction {
+        background: #2d2d30;
+        color: #ffffff;
+    }
+    
+    .career-section {
+        background: #333;
+        color: #ffffff;
+    }
+    
+    /* リンク関連 */
+    .back-link {
+        color: #4a9eff;
+    }
+    
+    .back-link:hover {
+        color: #66b3ff;
+    }
+    
+    /* 趣味関連 */
+    .hobby-item {
+        background: #2d2d30;
+        color: #ffffff;
+    }
+    
+    .hobby-icon {
+        color: #ffffff;
+    }
+    
+    .hobby-name {
+        color: #ffffff;
+    }
+    
+    .hobby-description {
+        color: #ffffff;
+    }
+    
+    /* ナビゲーション関連 */
+    .nav-pill {
+        color: #ffffff;
+    }
+    
+    .nav-pills-container {
+        background: rgba(255, 255, 255, 0.1);
+    }
+    
+    /* その他の要素 */
+    .card {
+        background: #2d2d30;
+        color: #ffffff;
+        border-color: #444;
+    }
+    
+    .btn {
+        background: #2d2d30;
+        color: #ffffff;
+        border-color: #444;
+    }
+    
+    .btn:hover {
+        background: #333;
+    }
+}
 
 /* フッター - Figmaデザインベース */
 .footer {
@@ -2591,7 +2751,19 @@ section {
     }
     
     .footer-content p {
-        color: #999999;
+        color: #ffffff;
+    }
+    
+    /* 好きなアーティストセクション */
+    .artist-tag {
+        background: #333;
+        color: #ffffff;
+        border-color: #444;
+    }
+    
+    .artist-tag:hover {
+        background: #444;
+        color: #ffffff;
     }
 }
  
